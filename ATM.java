@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 //Ye UI ke liye hai user ese hi dekhega
 class AtmMenu {
     void displayMenu() {
@@ -10,8 +11,10 @@ class AtmMenu {
         System.out.println("            5 ->> Mini Statement");
     }
 }
-//Data Hidding ko 100% hide karne ke liye 
-// Ye interface banaya hai jise child class me implements ki sahayata se implment kiya jayega
+
+// Data Hidding ko 100% hide karne ke liye
+// Ye interface banaya hai jise child class me implements ki sahayata se
+// implment kiya jayega
 interface ATMoperations {
     void checkBalance();
 
@@ -21,8 +24,11 @@ interface ATMoperations {
 
     void exit();
 }
-// ye abstract class hai constructor,variables define kiya gaya hai aur inisilive kiya gaya haii
-//aur ek abstract method bhi hai without body esko bhi child class me inheritence se kiya jayega
+
+// ye abstract class hai constructor,variables define kiya gaya hai aur
+// inisilive kiya gaya haii
+// aur ek abstract method bhi hai without body esko bhi child class me
+// inheritence se kiya jayega
 abstract class setForInterface {
     Scanner sc = new Scanner(System.in);
     long balance;
@@ -36,13 +42,15 @@ abstract class setForInterface {
     abstract void operations();
 
 }
-//esme sare operations ko implement kiya jayega interface aur inheritece ki madad se
-//method overriding kiya bhi gaya hai 
+
+// esme sare operations ko implement kiya jayega interface aur inheritece ki
+// madad se
+// method overriding kiya bhi gaya hai
 class ATMoperationsImplementation extends setForInterface implements ATMoperations {
 
     ATMoperationsImplementation(long balance, long userPin) {
         super(balance, userPin);
-        //superkey se va
+        // superkey se va
     }
 
     public void checkBalance() {
@@ -147,7 +155,7 @@ class ATM {
         System.out.println("Select your language");
         System.out.println("1 ->> English");
         System.out.println("2 ->> Hindi");
-        System.out.println("3 ->> Bhojpuri"); //e hamara bihar khatir
+        System.out.println("3 ->> Bhojpuri"); // e hamara bihar khatir
         System.out.println("Enter your choice");
         int lan1 = sc.nextInt();
         switch (lan1) {
@@ -167,6 +175,7 @@ class ATM {
         // if(lan1==3){
 
         System.out.println("Thank you for choosing language");
+        System.out.println("Thank you");
 
         AtmMenu menu = new AtmMenu();
         menu.displayMenu();
